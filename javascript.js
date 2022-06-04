@@ -42,11 +42,13 @@ function addBooktoDOM() {
         let newAuthor = document.createElement('p');
         let newPages = document.createElement('p');
         let newHaveRead = document.createElement('p');
+        let removeButton = document.createElement('button');
 
         newTitle.textContent = `Title: "${myLibrary[x].title}"`;
         newAuthor.textContent = `Author: ${myLibrary[x].author}`;
         newPages.textContent = `Pages: ${myLibrary[x].pages}`;
         newHaveRead.textContent = `Have read: ${myLibrary[x].haveRead}`;
+        removeButton.textContent = "Remove";
         
         newDiv.setAttribute('id', `book-${x}`);
         console.log(newDiv.id);
@@ -55,6 +57,7 @@ function addBooktoDOM() {
         newDiv.appendChild(newAuthor);
         newDiv.appendChild(newPages);
         newDiv.appendChild(newHaveRead);
+        newDiv.appendChild(removeButton);
 
         newDiv.classList.add('card');
 
@@ -62,5 +65,9 @@ function addBooktoDOM() {
         libraryIndex++;
 
     }
+}
+
+function removeBook() {
+
 }
 
