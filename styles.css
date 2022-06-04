@@ -6,6 +6,11 @@
 
 /*Use book-form for positioning */
 .book-form {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    margin-top: -147.5px; /* Negative half of height. */
+    margin-left: -145px; /* Negative half of width. */
 
 }
 
@@ -26,4 +31,8 @@
     height: 25px;
     background-color:rgb(232, 238, 243);
     border: none;
+}
+
+.library-container {
+    margin-top: 300px;
 }
