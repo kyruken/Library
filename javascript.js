@@ -2,6 +2,14 @@
 //array to store the books
 let myLibrary = [];
 
+function openForm() {
+    document.getElementById('form').style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById('form').style.display = "none";
+}
+
 function Book(title, author, pages, haveRead) {
     //the constructor
     this.title = title;

@@ -6,6 +6,7 @@
 
 /*Use book-form for positioning */
 .book-form {
+    display: none;
     position: fixed;
     left: 50%;
     top: 30%;
