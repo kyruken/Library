@@ -18,4 +18,16 @@ function Book(title, author, pages, haveRead) {
 
 function addBooktoLibrary() {
     //adding book function
+    let title = prompt("What's the title?");
+    let author = prompt("Who's the author?");
+    let pages = prompt("How many pages are there?");
+    let haveRead = prompt("Have you read it?");
+
+    let libraryIndex = 0;
+
+    let newBook = new Book(title, author, pages, haveRead);
+
+    myLibrary[libraryIndex] = newBook;
+    libraryIndex++;
 }
+
