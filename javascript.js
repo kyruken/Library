@@ -29,6 +29,9 @@ function Book(title, author, pages, haveRead) {
 
 function addBooktoLibrary() {
     //adding book function
+    let yes = document.getElementById("myCheck");
+    yes.checked ? form.read.value = true : form.read.value = false;
+    console.log(form.read.value);
     let newBook = new Book(form.title.value, form.author.value, form.pages.value, form.read.value);
 
     myLibrary[libraryIndex] = newBook;
