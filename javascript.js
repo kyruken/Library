@@ -53,22 +53,13 @@ function addBooktoDOM() {
         newDiv.setAttribute('id', `book-${x}`);
         removeButton.addEventListener('click', () => {
 
-            // newDiv.removeChild(newTitle);
-            // newDiv.removeChild(newAuthor);
-            // newDiv.removeChild(newPages);
-            // newDiv.removeChild(newHaveRead);
-            // newDiv.removeChild(removeButton);
-            
             newDiv.classList.remove('card');
             container.removeChild(newDiv);
             libraryIndex--;
-            console.log(libraryIndex);
-            console.log(x);
             myLibrary.length = libraryIndex;
 
 
         });
-        console.log(newDiv.id);
 
         newDiv.appendChild(newTitle);
         newDiv.appendChild(newAuthor);
@@ -83,9 +74,3 @@ function addBooktoDOM() {
 
     }
 }
-
-function removeBook() {
-    
-
-}
-
