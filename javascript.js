@@ -7,6 +7,14 @@ let libraryIndex = 0;
 let yes = document.getElementById("myCheck");
 
 //Form validation
+function hitSubmit() {
+    theForm.addEventListener("submit", (e) => {
+        addBooktoLibrary();
+        e.preventDefault();
+    })
+}
+
+hitSubmit();
 
 function titleValidation() {
     const title = document.getElementById("title");
@@ -78,6 +86,15 @@ class Book {
         }
 }
 
+function addBooktoLibrary() {
+    //adding book function
+    yes.checked ? form.read.value = true : form.read.value = false;
+    let newBook = new Book(form.title.value, form.author.value, form.pages.value, form.read.value);
+
+    myLibrary[libraryIndex] = newBook;
+    addBooktoDOM();
+}
+
 function addBooktoDOM() {
     
     for (let x = libraryIndex; x < myLibrary.length; x++) {
@@ -115,13 +132,11 @@ function addBooktoDOM() {
             if (myLibrary[x].haveRead === true) {
                 myLibrary[x].haveRead = false;
                 newHaveRead.textContent = `Have read: ${myLibrary[x].haveRead}`;
-                console.log(myLibrary[x].haveRead);
             }
 
             else {
                 myLibrary[x].haveRead = true;
                 newHaveRead.textContent = `Have read: ${myLibrary[x].haveRead}`;
-                console.log("swag");
             }
 
 
