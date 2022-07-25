@@ -46,7 +46,11 @@ input:valid {
     margin-top: 20px;
     width: 100px;
 }
+
 .library-container {
     margin-top: 300px;
 }
 
+.hide-form {
+    visibility: hidden;
+}

@@ -6,6 +6,15 @@ let myLibrary = [];
 let libraryIndex = 0;
 let yes = document.getElementById("myCheck");
 
+//New Book button to show and hide form
+function openForm() {
+    const newBookButton = document.getElementById("new-book");
+    newBookButton.addEventListener("click", () => {
+        theForm.classList.remove("hide-form");
+    })
+}
+openForm();
+
 //Form validation
 function hitSubmit() {
     theForm.addEventListener("submit", (e) => {
