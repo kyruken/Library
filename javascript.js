@@ -6,7 +6,33 @@ let myLibrary = [];
 let libraryIndex = 0;
 let yes = document.getElementById("myCheck");
 
+//Form validation
 
+function titleValidation() {
+    const title = document.getElementById("title");
+
+    title.addEventListener('input', () => {
+        title.setCustomValidity('');
+        title.checkValidity();
+    });
+
+    title.addEventListener('invalid', () => {
+        if (title.value === '') {
+            title.setCustomValidity("Enter a title");
+        } else {
+            title.setCustomValidity('Title must be less than 50 characters');
+        }
+    })
+}
+
+function authorValidation() {
+    const author = document.getElementById("author");
+}
+
+function pagesValidation() {
+    const pages = document.getElementById("pages");
+
+}
 class Book {
     constructor(title, author, pages, haveRead) {
         this.title = title;
@@ -18,27 +44,6 @@ class Book {
         info() {
             return `${title} by ${author}, ${pages}, ${haveRead}`;
         }
-}
-// function Book(title, author, pages, haveRead) {
-//     //the constructor
-//     this.title = title;
-//     this.author = author;
-//     this.pages = pages;
-//     this.haveRead = haveRead;
-
-//     this.info = function() {
-//         return `${title} by ${author}, ${pages}, ${haveRead}`;
-//     }
-
-// }
-
-function addBooktoLibrary() {
-    //adding book function
-    yes.checked ? form.read.value = true : form.read.value = false;
-    let newBook = new Book(form.title.value, form.author.value, form.pages.value, form.read.value);
-
-    myLibrary[libraryIndex] = newBook;
-    addBooktoDOM();
 }
 
 function addBooktoDOM() {
