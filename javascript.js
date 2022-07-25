@@ -6,14 +6,6 @@ let myLibrary = [];
 let libraryIndex = 0;
 let yes = document.getElementById("myCheck");
 
-function openForm() {
-    document.getElementById('form-container').style.display = "block";
-}
-
-function closeForm() {
-    document.getElementById('form-container').style.display = "none";
-    addBooktoLibrary();
-}
 
 class Book {
     constructor(title, author, pages, haveRead) {
