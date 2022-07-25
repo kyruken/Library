@@ -25,14 +25,46 @@ function titleValidation() {
     })
 }
 
+titleValidation();
+
 function authorValidation() {
     const author = document.getElementById("author");
+
+    author.addEventListener('input', () => {
+        author.setCustomValidity('');
+        author.checkValidity();
+    });
+
+    author.addEventListener('invalid', () => {
+        if (author.value === '') {
+            author.setCustomValidity("Enter an author");
+        } else {
+            author.setCustomValidity('Author must be less than 50 characters');
+        }
+    })
 }
+
+authorValidation();
 
 function pagesValidation() {
     const pages = document.getElementById("pages");
 
+    pages.addEventListener('input', () => {
+        pages.setCustomValidity('');
+        pages.checkValidity();
+    });
+
+    pages.addEventListener('invalid', () => {
+        if (pages.value === '') {
+            pages.setCustomValidity("Enter the amount of pages");
+        } else {
+            pages.setCustomValidity('The amount must be in number');
+        }
+    })
 }
+
+pagesValidation();
+
 class Book {
     constructor(title, author, pages, haveRead) {
         this.title = title;

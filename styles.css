@@ -1,4 +1,13 @@
 
+input:invalid {
+    border: 2px solid rgb(241, 54, 54);
+}
+
+input:valid {
+  border: 2px solid green;
+}
+
+
 .card {
     background-color: beige;
     width: 500px;
